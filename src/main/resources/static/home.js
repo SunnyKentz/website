@@ -67,7 +67,7 @@ function setButtons(button){
         });
     
         $("#firstSideDiv").on('mouseleave', function() {
-            $(".mainContent").animate({"border-top-left-radius": "20px"},700);
+            $(".mainContent").animate({"border-top-left-radius": "20px"},700)
         });
     }
 }
@@ -77,7 +77,7 @@ async function presentation(){
     resetButtons()
     setButtons(1)
     
-    await fetch("http://192.168.2.31:8080/presentation",{
+    await fetch("http://172.105.97.204/presentation",{
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers:{
           'Content-Type': 'application/json',
@@ -116,7 +116,7 @@ async function competence(){
     resetButtons()
     setButtons(2)
 
-    await fetch("http://192.168.2.31:8080/competence",{
+    await fetch("http://172.105.97.204/competence",{
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers:{
           'Content-Type': 'application/json',
@@ -170,7 +170,7 @@ async function professionnel(){
     resetButtons()
     setButtons(3)
 
-    await fetch("http://192.168.2.31:8080/professionnel",{
+    await fetch("http://172.105.97.204/professionnel",{
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers:{
           'Content-Type': 'application/json',
@@ -224,7 +224,7 @@ async function Travail(){
     resetButtons()
     setButtons(4)
     
-    await fetch("http://192.168.2.31:8080/travail",{
+    await fetch("http://172.105.97.204/travail",{
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers:{
           'Content-Type': 'application/json',
@@ -279,7 +279,7 @@ async function projets(){
     resetButtons()
     setButtons(5)
 
-    await fetch("http://192.168.2.31:8080/projets",{
+    await fetch("http://172.105.97.204/projets",{
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers:{
           'Content-Type': 'application/json',
@@ -342,7 +342,7 @@ async function projets(){
 async function Autres(){
     resetButtons()
     setButtons(6)
-    await fetch("http://192.168.2.31:8080/autres",{
+    await fetch("http://172.105.97.204/autres",{
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers:{
           'Content-Type': 'application/json',
@@ -425,7 +425,7 @@ async function cv(){
     titre.addClass('content-title')
     outerDiv.append(titre);
 
-    var link = $('<a href="http://192.168.2.31:8080/cv">').text("download")
+    var link = $('<a href="http://172.105.97.204/cv">').text("download")
     outerDiv.append(link);
 
     var content = $('<div>')
