@@ -41,7 +41,7 @@ public class MainController {
 
         answerFr.put("Titre", "Présentation");
         answerFr.put("Text", """
-                Bonjour, Étant un diplômer en technologie de l’électronique industriel du cégep Montmorency, 
+                Bonjour, Étant un diplômé en technologie de l’électronique industriel du cégep Montmorency, 
                 j’ai plus d’expérience en industriel qu’en logiciel. C’est en faisant de la programmation
                 dans mes cours d’industriel que je suis tomber en amour avec la programmation.
                 Cela ne change pas mon dévouement pour l’apprentissage de nouveaux concepts relier à la programmation. 
