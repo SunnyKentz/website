@@ -41,15 +41,16 @@ public class MainController {
 
         answerFr.put("Titre", "Présentation");
         answerFr.put("Text", """
-                Bonjour, Étant un diplômé en technologie de l’électronique industriel du cégep Montmorency, 
+                Bonjour, étant un diplômé en technologie de l’électronique industriel du cégep Montmorency,
                 j’ai plus d’expérience en industriel qu’en logiciel. C’est en faisant de la programmation
-                dans mes cours d’industriel que je suis tomber en amour avec la programmation.
-                Cela ne change pas mon dévouement pour l’apprentissage de nouveaux concepts relier à la programmation. 
-                Ce qui est en effet mon aptitude le plus fort. Dans le temps que j’ai eu pour m’introduire à 
-                l’informatique, je suis devenue un professionnel en Java et en C#. Je connaissais déjà le C/C++. 
-                De plus j’ai une très forte connaissance en Python et JavaScript/TypeScript. Je pratique souvent pour 
-                ne pas perdre ma rapidité. J’ai appris par moi-même Node.js et je une connaissance basique en SQL. 
-                En ce qui concerne mes aptitudes personnelles je suis assidue et très motivé. 
+                dans mes cours d’industriel que je suis tombé en amour avec la programmation.
+                Cela ne change pas mon dévouement pour l’apprentissage de nouveaux concepts reliés à la programmation.
+                Ce qui est, en effet, mon aptitude le plus fort. Dans le temps que j’ai eu pour m’introduire à
+                
+                l’informatique, je suis devenue un professionnel en Java et en C#. Je connaissais déjà le C/C++.
+                De plus, je possède une très forte connaissance en Python et en JavaScript/TypeScript. Je pratique souvent pour
+                ne pas perdre ma rapidité. J’ai appris par moi-même NodeJS et le language SQL.
+                En ce qui concerne mes aptitudes personnelles je suis assidue et très motivé.
                 Ma motivation dérive de mon désir d’être le meilleur.
                 """);
 
