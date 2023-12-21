@@ -425,8 +425,8 @@ async function cv(){
     titre.addClass('content-title')
     outerDiv.append(titre);
 
-    var link = $('<a href="http://172.105.97.204/cv">').text("download")
-    outerDiv.append(link);
+    var iframe = $('<iframe src="cv.pdf" style="width:40vw;height:50vh;">')
+    outerDiv.append(iframe);
 
     var content = $('<div>')
     content.addClass('content')
