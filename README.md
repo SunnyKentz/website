@@ -1,2 +1,2 @@
-Personal webasite made with spring-boot mvc
+Personal website made with spring-boot mvc
 Representation of my cv
