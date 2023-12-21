@@ -1,1 +1,1 @@
-Personal webasite made with spring mvc
+Personal webasite made with spring-boot mvc
