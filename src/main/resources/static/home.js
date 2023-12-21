@@ -354,7 +354,7 @@ async function Autres(){
         return answer.json()
     }).then(function(answer){
         
-        var outerDiv = $('<div>');
+        var outerDiv = $('<div style="display:flex;flex-direction:column;align-items:center;>');
 
         var titre = $('<h2>').text(answer.francais.Titre)
         titre.addClass('content-title')
