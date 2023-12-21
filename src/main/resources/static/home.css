@@ -146,10 +146,10 @@ h1{
 }
 
 .content-img{
-    width: 23vw;
+    width: 40vw;
     margin-left: 3vw;
     margin-top: 3vw;
-    border-radius: 20px;
+    border-radius: 15px;
     animation: slideup 1s forwards;
 }
 
