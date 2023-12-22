@@ -27,7 +27,7 @@ public class MainController {
             """;
 
     @GetMapping("/")
-    String mainPage(@RequestParam( required = false) String lang){
+    String mainPage(@RequestParam(name = "lang",defaultValue = "fr",required = false) String lang){
         if (lang == "en"){
                 return "homeEnglish.html";
         }
@@ -36,7 +36,7 @@ public class MainController {
 
     @GetMapping("/presentation")
     @ResponseBody
-    ResponseEntity<Map<String, Object>> presentation(@RequestParam(value = "lang",required = false) String lang){
+    ResponseEntity<Map<String, Object>> presentation(@RequestParam(name = "lang",defaultValue = "fr",required = false) String lang){
 
         Map<String,Object> answer = new HashMap<>();
         if(lang == "en"){
@@ -64,7 +64,7 @@ public class MainController {
 
     @GetMapping("/competence")
     @ResponseBody
-    ResponseEntity<Map<String, Object>> competence(@RequestParam(value = "lang",required = false) String lang){
+    ResponseEntity<Map<String, Object>> competence(@RequestParam(name = "lang",defaultValue = "fr",required = false) String lang){
 
         Map<String,Object> answer = new HashMap<>();
         if(lang == "en"){
@@ -118,7 +118,7 @@ public class MainController {
 
     @GetMapping("/professionnel")
     @ResponseBody
-    ResponseEntity<Map<String, Object>> professionnel(@RequestHeader(required = false) HttpHeaders orggin, @RequestParam(value = "lang",required = false) String lang){
+    ResponseEntity<Map<String, Object>> professionnel(@RequestParam(name = "lang",defaultValue = "fr",required = false) String lang){
 
         Map<String,Object> answer = new HashMap<>();
         Map<String,Object> answerFr = new HashMap<>();
@@ -153,7 +153,7 @@ public class MainController {
 
     @GetMapping("/travail")
     @ResponseBody
-    ResponseEntity<Map<String, Object>> travail(@RequestHeader(required = false) HttpHeaders orggin, @RequestParam(value = "lang",required = false) String lang){
+    ResponseEntity<Map<String, Object>> travail(@RequestParam(name = "lang",defaultValue = "fr",required = false) String lang){
 
         Map<String,Object> answer = new HashMap<>();
         Map<String,Object> answerFr = new HashMap<>();
@@ -188,7 +188,7 @@ public class MainController {
 
     @GetMapping("/projets")
     @ResponseBody
-    ResponseEntity<Map<String, Object>> projets(@RequestHeader(required = false) HttpHeaders orggin, @RequestParam(value = "lang",required = false) String lang){
+    ResponseEntity<Map<String, Object>> projets(@RequestParam(name = "lang",defaultValue = "fr",required = false) String lang){
 
         Map<String,Object> answer = new HashMap<>();
         Map<String,Object> answerFr = new HashMap<>();
@@ -226,7 +226,7 @@ public class MainController {
 
     @GetMapping("/autres")
     @ResponseBody
-    ResponseEntity<Map<String, Object>> autres(@RequestHeader(required = false) HttpHeaders orggin, @RequestParam(value = "lang",required = false) String lang){
+    ResponseEntity<Map<String, Object>> autres(@RequestParam(name = "lang",defaultValue = "fr",required = false) String lang){
 
         Map<String,Object> answer = new HashMap<>();
         Map<String,Object> answerFr = new HashMap<>();
@@ -262,7 +262,7 @@ public class MainController {
     }
 
     @GetMapping("/cv")
-    String cv(@RequestParam( required = false) String lang){
+    String cv(@RequestParam(name = "lang",defaultValue = "fr",required = false) String lang){
         return "cv.pdf";
     }
 }
