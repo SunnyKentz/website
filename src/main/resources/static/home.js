@@ -116,7 +116,7 @@ async function competence(){
     resetButtons()
     setButtons(2)
 
-    await fetch("http://172.105.97.204/competence?lang=en",{
+    await fetch("http://172.105.97.204/competence/?lang=en",{
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers:{
           'Content-Type': 'application/json',
