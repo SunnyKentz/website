@@ -40,7 +40,7 @@ public class MainController {
 
         Map<String,Object> answer = new HashMap<>();
         if(lang == "en"){
-                answer.put("Titre", "Profile");
+                answer.put("Titre", "Profile" + lang);
                 answer.put("Text", """
                         Two years of experience in software development to date, and I find that it's not 
                         enough. Yet, that's what's so impressive about the software field; one never stops learning, 
