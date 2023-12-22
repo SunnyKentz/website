@@ -28,6 +28,9 @@ public class MainController {
 
     @GetMapping("/")
     String mainPage(@RequestParam( required = false) String lang){
+        if (lang == "en"){
+                return "homeEnglish.html";
+        }
         return "home.html";
     }
 
