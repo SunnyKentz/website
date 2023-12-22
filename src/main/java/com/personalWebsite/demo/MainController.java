@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
-//import org.springframework.web.bind.annotation.ResponseBody;
-//import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin(maxAge = 3600)
 @Controller()
@@ -40,7 +38,7 @@ public class MainController {
 
         Map<String,Object> answer = new HashMap<>();
         if(lang.equalsIgnoreCase("en")){
-                answer.put("Titre", "Profile "+lang);
+                answer.put("Titre", "Profile");
                 answer.put("Text", """
                         Two years of experience in software development to date, and I find that it's not 
                         enough. Yet, that's what's so impressive about the software field; one never stops learning, 
@@ -49,7 +47,7 @@ public class MainController {
                         Agile SCRUM process.
                         """);
         }else{
-                answer.put("Titre", "Présentation "+lang);
+                answer.put("Titre", "Présentation");
                 answer.put("Text", """
                         Deux ans d’expérience en développement logiciel à ce jour, je trouve que ce 
                         n’est pas assez. C’est pourtant ce qui est si impressionnant, dans le domaine du 
