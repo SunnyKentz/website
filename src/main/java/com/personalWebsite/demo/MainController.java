@@ -49,7 +49,7 @@ public class MainController {
                         Agile SCRUM process.
                         """);
         }else{
-                answer.put("Titre", "Présentation");
+                answer.put("Titre", "Présentation"+ lang);
                 answer.put("Text", """
                         Deux ans d’expérience en développement logiciel à ce jour, je trouve que ce 
                         n’est pas assez. C’est pourtant ce qui est si impressionnant, dans le domaine du 
