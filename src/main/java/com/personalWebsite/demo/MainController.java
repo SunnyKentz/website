@@ -82,10 +82,10 @@ public class MainController {
                 """);
                 answer.put("sousTitre3", "Programming Skills");
                 answer.put("Text3", """
-                        Programmation en Java, C# & .NET, Go , NodeJS et Python. (Back-end)
-                        Bash, Autohotkey. (Script, Automation)
-                        React, Flutter & Qt6 (UI Front-end mobile app)
-                        Docker, MariaDB, MySQL (system architecture & database)
+                        Able to code in Java, C# & .NET, Go , NodeJS et Python. (Back-end)\n
+                        Bash, Autohotkey. (Script, Automation)\n
+                        React, Flutter & Qt6 (UI Front-end mobile app)\n
+                        Docker, MariaDB, MySQL (system architecture & database)\n
                         Pytest, Playwright, Selenium. (Test)
                 """);
         }else{
@@ -103,10 +103,10 @@ public class MainController {
                         """);
                 answer.put("sousTitre3", "Compétence en Programation");
                 answer.put("Text3", """
-                        Programmation en Java, C# & .NET, Go , NodeJS et Python. (Back-end)
-                        Bash, Autohotkey. (Script, Automation)
-                        React, Flutter & Qt6 (UI Front-end Application mobile)
-                        Docker, MariaDB, MySQL (architecture de système & base de données)
+                        Programmation en Java, C# & .NET, Go , NodeJS et Python. (Back-end)\n
+                        Bash, Autohotkey. (Script, Automation)\n
+                        React, Flutter & Qt6 (UI Front-end Application mobile)\n
+                        Docker, MariaDB, MySQL (architecture de système & base de données)\n
                         Pytest, Playwright, Selenium. (Test)
                         """);  
         }
