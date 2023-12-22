@@ -28,7 +28,7 @@ public class MainController {
 
     @GetMapping("/")
     String mainPage(@RequestParam(name = "lang",defaultValue = "fr",required = false) String lang){
-        if (lang == "en"){
+        if (lang == "fr"){
                 return "homeEnglish.html";
         }
         return "home.html";
