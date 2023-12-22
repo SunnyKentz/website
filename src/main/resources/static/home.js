@@ -184,26 +184,26 @@ async function professionnel(){
         
         var outerDiv = $('<div>');
 
-        var titre = $('<h2>').text(answer.francais.Titre)
+        var titre = $('<h2>').text(answer.Titre)
         titre.addClass('content-title')
         outerDiv.append(titre);
 
-        var text = $('<span>').text(answer.francais.sousTitre1)
+        var text = $('<span>').text(answer.sousTitre1)
         text.addClass('content-subTitle')
         outerDiv.append(text);
-        var text = $('<p>').text(answer.francais.Text1)
+        var text = $('<p>').text(answer.Text1)
         text.addClass('content-text')
         outerDiv.append(text);
 
-        var text = $('<p>').text(answer.francais.Text2)
+        var text = $('<p>').text(answer.Text2)
         text.addClass('content-text')
         outerDiv.append(text);
 
-        var text = $('<p>').text(answer.francais.Text3)
+        var text = $('<p>').text(answer.Text3)
         text.addClass('content-text')
         outerDiv.append(text);
         
-        var text = $('<p>').text(answer.francais.Text4)
+        var text = $('<p>').text(answer.Text4)
         text.addClass('content-text')
         outerDiv.append(text);
 

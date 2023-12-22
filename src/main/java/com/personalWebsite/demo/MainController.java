@@ -82,10 +82,10 @@ public class MainController {
                 """);
                 answer.put("sousTitre3", "Programming Skills");
                 answer.put("Text3", """
-                        Able to code in Java, C# & .NET, Go , NodeJS et Python. (Back-end)\n\n
-                        Bash, Autohotkey. (Script, Automation)\n\n
-                        React, Flutter & Qt6 (UI Front-end mobile app)\n\n
-                        Docker, MariaDB, MySQL (system architecture & database)\n\n
+                        Able to code in Java, C# & .NET, Go , NodeJS et Python. (Back-end)\n
+                        Bash, Autohotkey. (Script, Automation)
+                        React, Flutter & Qt6 (UI Front-end mobile app)
+                        Docker, MariaDB, MySQL (system architecture & database)
                         Pytest, Playwright, Selenium. (Test)
                 """);
         }else{
@@ -103,10 +103,10 @@ public class MainController {
                         """);
                 answer.put("sousTitre3", "Compétence en Programation");
                 answer.put("Text3", """
-                        Programmation en Java, C# & .NET, Go , NodeJS et Python. (Back-end)\n\n
-                        Bash, Autohotkey. (Script, Automation)\n\n
-                        React, Flutter & Qt6 (UI Front-end Application mobile)\n\n
-                        Docker, MariaDB, MySQL (architecture de système & base de données)\n\n
+                        Programmation en Java, C# & .NET, Go , NodeJS et Python. (Back-end)
+                        Bash, Autohotkey. (Script, Automation)
+                        React, Flutter & Qt6 (UI Front-end Application mobile)
+                        Docker, MariaDB, MySQL (architecture de système & base de données)
                         Pytest, Playwright, Selenium. (Test)
                         """);  
         }
@@ -121,31 +121,40 @@ public class MainController {
     ResponseEntity<Map<String, Object>> professionnel(@RequestParam(name = "lang",defaultValue = "fr",required = false) String lang){
 
         Map<String,Object> answer = new HashMap<>();
-        Map<String,Object> answerFr = new HashMap<>();
-        Map<String,Object> answerEn = new HashMap<>();
 
-        answerFr.put("Titre", "Expérience professionnel");
-
-        answerFr.put("sousTitre1", "Developeur d’application python");
-        answerFr.put("Text1", """
-                Telcobridges, QC, Boucherville Juin 2022 à août 2022.
-                """);
-
-        answerFr.put("Text2", """
-                Création d’une application avec QT6 python en utilisation et Git pour commit et push.
-                J'ai aussi utiliser  Jira pour CI/CD devops.
-                """);
-
-        answerFr.put("Text3", """
-                J’ai automatisé des scripts sur Windows avec Autohotkey.
-                """);
-
-        answerFr.put("Text4", """
-                 Mon application avait pour but d’augmenter et d’automatisé la production, ce qui est un succès.
-                """);
-
-        answer.put("English", answerEn);
-        answer.put("francais",answerFr);
+        if(lang.equalsIgnoreCase("en")){
+                answer.put("Titre", "Professional Experience");
+                answer.put("sousTitre1", "Python Application Developer");
+                answer.put("Text1", """
+                        Telcobridges, QC, Boucherville, June 2022 to August 2022.
+                        """);
+                answer.put("Text2", """
+                        Developed an application using QT6 and Python, utilizing Git for commits and pushes.
+                        Also used Jira agile and for CI/CD DevOps.
+                        """);
+                answer.put("Text3", """
+                        Automated scripts on Windows using Autohotkey.
+                        """);
+                answer.put("Text4", """
+                        The goal of my application was to increase and automate production, which was a success.
+                        """);
+        }else{
+                answer.put("Titre", "Expérience professionnel");
+                answer.put("sousTitre1", "Developeur d’application python");
+                answer.put("Text1", """
+                        Telcobridges, QC, Boucherville Juin 2022 à août 2022.
+                        """);
+                answer.put("Text2", """
+                        Création d’une application avec QT6 python en utilisation et Git pour commit et push.
+                        J'ai aussi utiliser  Jira protocol agile et pour CI/CD devops.
+                        """);
+                answer.put("Text3", """
+                        J’ai automatisé des scripts sur Windows avec Autohotkey.
+                        """);
+                answer.put("Text4", """
+                        Mon application avait pour but d’augmenter et d’automatisé la production, ce qui est un succès.
+                        """);
+        }
         answer.put("src","telcobridges.jpg");
 
         return ResponseEntity.status(HttpStatus.OK).body(answer);
