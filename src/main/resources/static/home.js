@@ -1,4 +1,3 @@
-let lang=document.querySelector('html').lang;
 function init(){
     $("#firstSideDiv").mouseover(function(){
         $(".mainContent").animate({"border-top-left-radius": "0px"},700);
@@ -77,7 +76,7 @@ function setButtons(button){
 async function presentation(){
     resetButtons()
     setButtons(1)
-    
+    let lang=document.querySelector('html').lang;
     await fetch("http://172.105.97.204/presentation?lang="+lang,{
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers:{
@@ -116,7 +115,7 @@ async function presentation(){
 async function competence(){
     resetButtons()
     setButtons(2)
-
+    let lang=document.querySelector('html').lang;
     await fetch("http://172.105.97.204/competence?lang="+lang,{
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers:{
@@ -170,7 +169,7 @@ async function competence(){
 async function professionnel(){
     resetButtons()
     setButtons(3)
-
+    let lang=document.querySelector('html').lang;
     await fetch("http://172.105.97.204/professionnel?lang="+lang,{
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers:{
@@ -224,7 +223,7 @@ async function professionnel(){
 async function Travail(){
     resetButtons()
     setButtons(4)
-    
+    let lang=document.querySelector('html').lang;
     await fetch("http://172.105.97.204/travail?lang="+lang,{
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers:{
@@ -279,7 +278,7 @@ async function Travail(){
 async function projets(){
     resetButtons()
     setButtons(5)
-
+    let lang=document.querySelector('html').lang;
     await fetch("http://172.105.97.204/projets?lang="+lang,{
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers:{
@@ -343,6 +342,7 @@ async function projets(){
 async function Autres(){
     resetButtons()
     setButtons(6)
+    let lang=document.querySelector('html').lang;
     await fetch("http://172.105.97.204/autres?lang="+lang,{
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers:{
