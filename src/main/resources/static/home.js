@@ -1,3 +1,4 @@
+let lang=document.querySelector('html').lang;
 function init(){
     $("#firstSideDiv").mouseover(function(){
         $(".mainContent").animate({"border-top-left-radius": "0px"},700);
@@ -77,7 +78,7 @@ async function presentation(){
     resetButtons()
     setButtons(1)
     
-    await fetch("http://172.105.97.204/presentation",{
+    await fetch("http://172.105.97.204/presentation?lang="+lang,{
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers:{
           'Content-Type': 'application/json',
@@ -116,7 +117,7 @@ async function competence(){
     resetButtons()
     setButtons(2)
 
-    await fetch("http://172.105.97.204/competence/?lang=en",{
+    await fetch("http://172.105.97.204/competence?lang="+lang,{
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers:{
           'Content-Type': 'application/json',
@@ -170,7 +171,7 @@ async function professionnel(){
     resetButtons()
     setButtons(3)
 
-    await fetch("http://172.105.97.204/professionnel",{
+    await fetch("http://172.105.97.204/professionnel?lang="+lang,{
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers:{
           'Content-Type': 'application/json',
@@ -224,7 +225,7 @@ async function Travail(){
     resetButtons()
     setButtons(4)
     
-    await fetch("http://172.105.97.204/travail",{
+    await fetch("http://172.105.97.204/travail?lang="+lang,{
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers:{
           'Content-Type': 'application/json',
@@ -279,7 +280,7 @@ async function projets(){
     resetButtons()
     setButtons(5)
 
-    await fetch("http://172.105.97.204/projets",{
+    await fetch("http://172.105.97.204/projets?lang="+lang,{
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers:{
           'Content-Type': 'application/json',
@@ -342,7 +343,7 @@ async function projets(){
 async function Autres(){
     resetButtons()
     setButtons(6)
-    await fetch("http://172.105.97.204/autres",{
+    await fetch("http://172.105.97.204/autres?lang="+lang,{
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers:{
           'Content-Type': 'application/json',
