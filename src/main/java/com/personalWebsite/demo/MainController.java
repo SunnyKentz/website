@@ -28,7 +28,7 @@ public class MainController {
 
     @GetMapping("/")
     String mainPage(@RequestParam(name = "lang",defaultValue = "fr",required = false) String lang){
-        if (lang == "fr"){
+        if (lang.equalsIgnoreCase("en")){
                 return "homeEnglish.html";
         }
         return "home.html";
@@ -39,7 +39,7 @@ public class MainController {
     ResponseEntity<Map<String, Object>> presentation(@RequestParam(name = "lang",defaultValue = "fr",required = false) String lang){
 
         Map<String,Object> answer = new HashMap<>();
-        if(lang == "en"){
+        if(lang.equalsIgnoreCase("en")){
                 answer.put("Titre", "Profile "+lang);
                 answer.put("Text", """
                         Two years of experience in software development to date, and I find that it's not 
@@ -67,7 +67,7 @@ public class MainController {
     ResponseEntity<Map<String, Object>> competence(@RequestParam(name = "lang",defaultValue = "fr",required = false) String lang){
 
         Map<String,Object> answer = new HashMap<>();
-        if(lang == "en"){
+        if(lang.equalsIgnoreCase("en")){
                 answer.put("Titre", "Skills");
                 answer.put("sousTitre1", "Social Skills");
                 answer.put("Text1", """
