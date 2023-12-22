@@ -33,95 +33,81 @@ public class MainController {
 
     @GetMapping("/presentation")
     @ResponseBody
-    ResponseEntity<Map<String, Object>> presentation(@RequestHeader(required = false) HttpHeaders orggin, @RequestParam(value = "lang",required = false) String lang){
+    ResponseEntity<Map<String, Object>> presentation(@RequestParam(value = "lang",required = false) String lang){
 
         Map<String,Object> answer = new HashMap<>();
-        Map<String,Object> answerFr = new HashMap<>();
-        Map<String,Object> answerEn = new HashMap<>();
-
-        answerFr.put("Titre", "Présentation");
-        answerFr.put("Text", """
-                Bonjour, étant un diplômé en technologie de l’électronique industriel du cégep Montmorency,
-                j’ai plus d’expérience en industriel qu’en logiciel. C’est en faisant de la programmation
-                dans mes cours d’industriel que je suis tombé en amour avec la programmation.
-                Cela ne change pas mon dévouement pour l’apprentissage de nouveaux concepts reliés à la programmation.
-                Ce qui est, en effet, mon aptitude le plus fort. Dans le temps que j’ai eu pour m’introduire à
-                
-                l’informatique, je suis devenue un professionnel en Java et en C#. Je connaissais déjà le C/C++.
-                De plus, je possède une très forte connaissance en Python et en JavaScript/TypeScript. Je pratique souvent pour
-                ne pas perdre ma rapidité. J’ai appris par moi-même NodeJS et le language SQL.
-                En ce qui concerne mes aptitudes personnelles je suis assidue et très motivé.
-                Ma motivation dérive de mon désir d’être le meilleur.
-                """);
-
-        answerEn.put("Titre", "Profile");
-        answerEn.put("Text", """
-                Hello, as a graduate in industrial electronics technology from Cégep Montmorency,
-                I have more experience in industry than in software. 
-                It was while programming in my industrial courses that I fell in love with programming. 
-                This does not change my dedication to learning new concepts related to programming, 
-                which is in fact my strongest aptitude. In the time I have had to introduce myself to computer science, 
-                I have become proficient in Java and C#. I already knew C/C++. In addition, 
-                I have a very strong knowledge of Python and JavaScript/TypeScript. I practice often so as not to lose my speed. 
-                I have taught myself Node.js and have a basic knowledge of SQL. As for my personal skills,
-                 I am diligent and highly motivated. My motivation comes from my desire to be the best.
-                """);
-
-        answer.put("English", answerEn);
-        answer.put("francais",answerFr);
+        if(lang == "en"){
+                answer.put("Titre", "Profile");
+                answer.put("Text", """
+                        Two years of experience in software development to date, and I find that it's not 
+                        enough. Yet, that's what's so impressive about the software field; one never stops learning, 
+                        and you're never too good... At least, I haven't proven it yet. From DevOps 
+                        CI to testing, from automation to CD deployment, I am familiar with the entire 
+                        Agile SCRUM process.
+                        """);
+        }else{
+                answer.put("Titre", "Présentation");
+                answer.put("Text", """
+                        Deux ans d’expérience en développement logiciel à ce jour, je trouve que ce 
+                        n’est pas assez. C’est pourtant ce qui est si impressionnant, dans le domaine du 
+                        software, on ne finit pas d’apprendre, on n’est jamais trop bon… Je ne l’ai pas
+                        encore prouvé en tout cas. Du devops CI aux tests, de l’automatisation Jusqu’au 
+                        déploiement CD, je connais tout le procédé Agile SCRUM.
+                        """);
+                }
         answer.put("src","profile.jpg");
-
-
-       return ResponseEntity.status(HttpStatus.OK).body(answer);
+        return ResponseEntity.status(HttpStatus.OK).body(answer);
     }
 
     @GetMapping("/competence")
     @ResponseBody
-    ResponseEntity<Map<String, Object>> competence(@RequestHeader(required = false) HttpHeaders orggin, @RequestParam(value = "lang",required = false) String lang){
+    ResponseEntity<Map<String, Object>> competence(@RequestParam(value = "lang",required = false) String lang){
 
         Map<String,Object> answer = new HashMap<>();
-        Map<String,Object> answerFr = new HashMap<>();
-        Map<String,Object> answerEn = new HashMap<>();
-
-        answerFr.put("Titre", "Compétence");
-
-        answerFr.put("sousTitre1", "Compétence Social");
-        answerFr.put("Text1", """
-                Capacité de parler et d’écrire en anglais et en français, ayant l’habitude de rendre
-                des rapports écrits et orales, j’ai développé une bonne capacité à communiquer et à
-                établir des liens avec mon entourage.
+        if(lang == "en"){
+                answer.put("Titre", "Skills");
+                answer.put("sousTitre1", "Social Skills");
+                answer.put("Text1", """
+                        Ability to speak and write in English and French, with a habit of delivering written and oral
+                        reports, I have developed good communication skills and the ability to establish connections
+                        with those around me.
                 """);
-        answerFr.put("sousTitre2", "Compétence en informatique");
-        answerFr.put("Text2", """
-                Capacité d’installer et de dépanner Windows 7 à 11
-                Connaissance de base de Unix/Linux.
+                answer.put("sousTitre2", "Computer Skills");
+                answer.put("Text2", """
+                Ability to install and troubleshoot Windows 7 to 11 
+                and knowledge of Unix/Linux (Ubuntu, Debian, Fedora).
                 """);
-        answerFr.put("sousTitre3", "Compétence en Programation");
-        answerFr.put("Text3", """
-                Programmation en Java, dotNET, Golang, et Python. (Back-end)
-                React, Flutter & Qt6 (UI Front-end Application mobile).
+                answer.put("sousTitre3", "Programming Skills");
+                answer.put("Text3", """
+                        Programmation en Java, C# & .NET, Go , NodeJS et Python. (Back-end)
+                        Bash, Autohotkey. (Script, Automation)
+                        React, Flutter & Qt6 (UI Front-end mobile app)
+                        Docker, MariaDB, MySQL (system architecture & database)
+                        Pytest, Playwright, Selenium. (Test)
                 """);
-
-        answerEn.put("Titre", "Skills");
-        answerEn.put("sousTitre1", "Social Skills");
-        answerEn.put("Text1", """
-        Ability to speak and write in English and French, with a habit of delivering written and oral
-        reports, I have developed good communication skills and the ability to establish connections
-        with those around me.
-        """);
-        answerEn.put("sousTitre2", "Computer Skills");
-        answerEn.put("Text2", """
-        Ability to install and troubleshoot Windows 7 to 11
-        Basic knowledge of Unix/Linux.
-        """);
-        answerEn.put("sousTitre3", "Programming Skills");
-        answerEn.put("Text3", """
-        Programming in Java, dotNET, Golang, and Python (Back-end)
-        React, Flutter & Qt6 (UI Front-end Mobile Applications).
-        """);
-
-        answer.put("English", answerEn);
-        answer.put("francais",answerFr);
+        }else{
+                answer.put("Titre", "Compétence");
+                answer.put("sousTitre1", "Compétence Social");
+                answer.put("Text1", """
+                        Capacité de parler et d’écrire en anglais et en français, ayant l’habitude de rendre
+                        des rapports écrits et orales, j’ai développé une bonne capacité à communiquer et à
+                        établir des liens avec mon entourage.
+                        """);
+                answer.put("sousTitre2", "Compétence en informatique");
+                answer.put("Text2", """
+                        Capacité d’installer et de dépanner Windows 7 à 11, 
+                        Connaissance de Unix/Linux (Ubuntu, Debian, Fedora).
+                        """);
+                answer.put("sousTitre3", "Compétence en Programation");
+                answer.put("Text3", """
+                        Programmation en Java, C# & .NET, Go , NodeJS et Python. (Back-end)
+                        Bash, Autohotkey. (Script, Automation)
+                        React, Flutter & Qt6 (UI Front-end Application mobile)
+                        Docker, MariaDB, MySQL (architecture de système & base de données)
+                        Pytest, Playwright, Selenium. (Test)
+                        """);  
+        }
+        
         answer.put("src","social.jpg");
 
         return ResponseEntity.status(HttpStatus.OK).body(answer);

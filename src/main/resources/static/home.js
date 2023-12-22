@@ -89,9 +89,9 @@ async function presentation(){
         return answer.json()
     }).then(function(answer){
 
-        var titre = $('<h2>').text(answer.francais.Titre)
+        var titre = $('<h2>').text(answer.Titre)
         titre.addClass('content-title')
-        var text = $('<p>').text(answer.francais.Text)
+        var text = $('<p>').text(answer.Text)
         text.addClass('content-text')
 
         var outerDiv = $('<div>');
@@ -130,26 +130,26 @@ async function competence(){
         
         var outerDiv = $('<div>');
 
-        var titre = $('<h2>').text(answer.francais.Titre)
+        var titre = $('<h2>').text(answer.Titre)
         titre.addClass('content-title')
         outerDiv.append(titre);
 
-        var text = $('<span>').text(answer.francais.sousTitre1)
+        var text = $('<span>').text(answer.sousTitre1)
         text.addClass('content-subTitle')
         outerDiv.append(text);
-        var text = $('<p>').text(answer.francais.Text1)
+        var text = $('<p>').text(answer.Text1)
         text.addClass('content-text')
         outerDiv.append(text);
-        var text = $('<span>').text(answer.francais.sousTitre2)
+        var text = $('<span>').text(answer.sousTitre2)
         text.addClass('content-subTitle')
         outerDiv.append(text);
-        var text = $('<p>').text(answer.francais.Text2)
+        var text = $('<p>').text(answer.Text2)
         text.addClass('content-text')
         outerDiv.append(text);
-        var text = $('<span>').text(answer.francais.sousTitre3)
+        var text = $('<span>').text(answer.sousTitre3)
         text.addClass('content-subTitle')
         outerDiv.append(text);
-        var text = $('<p>').text(answer.francais.Text3)
+        var text = $('<p>').text(answer.Text3)
         text.addClass('content-text')
         outerDiv.append(text);
 
