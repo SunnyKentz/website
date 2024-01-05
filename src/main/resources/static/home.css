@@ -83,6 +83,9 @@
     overflow-y: auto;
     max-width:80vw ;
     max-height: 68vh ;
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 .content{
     display: flex;
@@ -90,6 +93,10 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.mainContent::-webkit-scrollbar {
+    display: none;
 }
 
 .cardDiv{

@@ -77,7 +77,7 @@ async function presentation(){
     resetButtons()
     setButtons(1)
     let lang=document.querySelector('html').lang;
-    await fetch("http://172.105.97.204/presentation?lang="+lang,{
+    await fetch("https://sunny.betteralarm.info/presentation?lang="+lang,{
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers:{
           'Content-Type': 'application/json',
@@ -116,7 +116,7 @@ async function competence(){
     resetButtons()
     setButtons(2)
     let lang=document.querySelector('html').lang;
-    await fetch("http://172.105.97.204/competence?lang="+lang,{
+    await fetch("https://sunny.betteralarm.info/competence?lang="+lang,{
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers:{
           'Content-Type': 'application/json',
@@ -170,7 +170,7 @@ async function professionnel(){
     resetButtons()
     setButtons(3)
     let lang=document.querySelector('html').lang;
-    await fetch("http://172.105.97.204/professionnel?lang="+lang,{
+    await fetch("https://sunny.betteralarm.info/professionnel?lang="+lang,{
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers:{
           'Content-Type': 'application/json',
@@ -224,7 +224,7 @@ async function Travail(){
     resetButtons()
     setButtons(4)
     let lang=document.querySelector('html').lang;
-    await fetch("http://172.105.97.204/travail?lang="+lang,{
+    await fetch("https://sunny.betteralarm.info/travail?lang="+lang,{
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers:{
           'Content-Type': 'application/json',
@@ -279,7 +279,7 @@ async function projets(){
     resetButtons()
     setButtons(5)
     let lang=document.querySelector('html').lang;
-    await fetch("http://172.105.97.204/projets?lang="+lang,{
+    await fetch("https://sunny.betteralarm.info/projets?lang="+lang,{
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers:{
           'Content-Type': 'application/json',
@@ -343,7 +343,7 @@ async function Autres(){
     resetButtons()
     setButtons(6)
     let lang=document.querySelector('html').lang;
-    await fetch("http://172.105.97.204/autres?lang="+lang,{
+    await fetch("https://sunny.betteralarm.info/autres?lang="+lang,{
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers:{
           'Content-Type': 'application/json',
@@ -412,7 +412,8 @@ async function Autres(){
         content.append(outerDiv)
 
         $(".mainContent").empty()
-        $(".mainContent").append(content)
+        $(".mainContent").appendjava
+        (content)
     })
 }
 
@@ -422,8 +423,10 @@ async function cv(){
 
     var outerDiv = $('<div>');
 
-    var titre = $('<h2>').text("Mon CV")
+    var titre = $('<h2>')
+    var link = $('<a href="cv.pdf">').text("Mon CV")
     titre.addClass('content-title')
+    titre.append(link)
     outerDiv.append(titre);
 
     var iframe = $('<iframe src="cv.pdf" style="width:40vw;height:50vh;">')
